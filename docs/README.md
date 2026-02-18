@@ -15,7 +15,7 @@ Everything you need to understand, build, and contribute to this project.
 | 06 | [Contributing](./06-contributing.md) | How to get involved |
 | 07 | [Git Workflow](./07-git-workflow.md) | Branching, commits, PRs, and clean history |
 | 08 | [Design Patterns](./08-design-patterns.md) | Adapters, DI, repository, result, and more |
-| 09 | [Feature Development Loop](./09-feature-development-loop.md) | Story → tests → implement → ship |
+| 09 | [Feature Development Loop](./09-feature-development-loop.md) | Story -> tests -> implement -> ship |
 | 10 | [Documentation Standards](./10-documentation-standards.md) | How to write and maintain docs |
 
 ## User Documentation

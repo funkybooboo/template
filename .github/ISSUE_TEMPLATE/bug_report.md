@@ -24,7 +24,7 @@ assignees: ""
 
 - **Version:** <!-- e.g. v1.2.3 or commit hash -->
 - **OS:** <!-- e.g. Ubuntu 22.04, macOS 14, Windows 11 -->
-- **Runtime:** <!-- e.g. Node 22, Python 3.12, Rust 1.82 — if applicable -->
+- **Runtime:** <!-- e.g. Node 22, Python 3.12, Rust 1.82 -- if applicable -->
 
 ## Logs / Output
 

@@ -28,7 +28,7 @@ Welcome. This document explains what this project is, why it exists, and the val
 
 ## Guiding Values
 
-These values shape every decision in this project — from architecture to naming to what gets built and what doesn't.
+These values shape every decision in this project -- from architecture to naming to what gets built and what doesn't.
 
 ### Simplicity Over Cleverness
 
@@ -40,7 +40,7 @@ Make intent visible. Prefer clear names, obvious structure, and stated assumptio
 
 ### Quality Over Speed
 
-Shortcuts create debt. Write tests. Document decisions. Refactor when things get messy. Moving fast by cutting corners is an illusion — you pay for it later, with interest.
+Shortcuts create debt. Write tests. Document decisions. Refactor when things get messy. Moving fast by cutting corners is an illusion -- you pay for it later, with interest.
 
 ### Test-First Thinking
 
@@ -56,7 +56,7 @@ All documentation lives in the repository as plain text. It is version controlle
 
 ### Commit to the Roadmap
 
-Features are planned, not improvised. Every version has a clear goal. Work is done in small, complete increments — each one shippable on its own.
+Features are planned, not improvised. Every version has a clear goal. Work is done in small, complete increments -- each one shippable on its own.
 
 ---
 

@@ -1,18 +1,18 @@
 # Feature Development Loop
 
-Every feature goes through the same loop — from idea to production. This process is not bureaucracy. It is the difference between shipping something that works and shipping something that seems to work.
+Every feature goes through the same loop -- from idea to production. This process is not bureaucracy. It is the difference between shipping something that works and shipping something that seems to work.
 
 ---
 
 ## The Loop
 
 ```
-  1. Define     →   2. Test first   →   3. Implement
-     the story          (TDD)              (red → green → refactor)
-       ↓                                        ↓
-  6. CI gates   ←   5. Review       ←   4. Document
+  1. Define     ->   2. Test first   ->   3. Implement
+     the story          (TDD)              (red -> green -> refactor)
+       v                                        v
+  6. CI gates   <-   5. Review       <-   4. Document
   (must pass)
-       ↓
+       v
   7. Ship & monitor
 ```
 
@@ -22,7 +22,7 @@ Every feature goes through the same loop — from idea to production. This proce
 
 Before writing a line of code, define what you are building and why. A story without acceptance criteria is just a wish.
 
-**Template** — save to `plans/stories/US-NNN-short-title.md`:
+**Template** -- save to `plans/stories/US-NNN-short-title.md`:
 
 ```markdown
 # US-042: Short Title
@@ -69,13 +69,13 @@ A good story answers: who benefits, what they can do, and why it matters. If you
 
 Write tests before writing implementation. This forces you to think about the interface before the internals, and gives you a clear, failing target to work toward.
 
-**Start with end-to-end tests** — one per acceptance criterion:
+**Start with end-to-end tests** -- one per acceptance criterion:
 
 ```
 test "AC1: [description of what AC1 verifies]" {
-  // Arrange — set up the precondition from the story
-  // Act     — perform the action from the story
-  // Assert  — verify the expected result from the story
+  // Arrange -- set up the precondition from the story
+  // Act     -- perform the action from the story
+  // Assert  -- verify the expected result from the story
 }
 ```
 
@@ -106,18 +106,18 @@ All tests should fail at this point. That's the point.
 
 ---
 
-## Phase 3: Implement (Red → Green → Refactor)
+## Phase 3: Implement (Red -> Green -> Refactor)
 
 Now write the code. Follow the cycle strictly:
 
-1. **Red** — run the tests, confirm they fail
-2. **Green** — write the *minimum* code to make them pass
-3. **Refactor** — improve the code while keeping tests green
+1. **Red** -- run the tests, confirm they fail
+2. **Green** -- write the *minimum* code to make them pass
+3. **Refactor** -- improve the code while keeping tests green
 
 Don't skip the refactor step. Green tests with messy code is not done.
 
 ```
-# Red: tests fail — function doesn't exist yet
+# Red: tests fail -- function doesn't exist yet
 
 # Green: minimal implementation that passes
 function calculateDiscount(price, user) {
@@ -148,10 +148,10 @@ Documentation is part of the feature. A feature without documentation is not don
 
 **What to update:**
 
-- **User docs** (`docs/user/`) — how to use the feature; written for the user, not the developer
-- **Developer docs** (`docs/developer/`) — how it works, edge cases, integration points
-- **CHANGELOG** — add an entry under `[Unreleased]`
-- **README** — if the feature changes the project's headline capabilities
+- **User docs** (`docs/user/`) -- how to use the feature; written for the user, not the developer
+- **Developer docs** (`docs/developer/`) -- how it works, edge cases, integration points
+- **CHANGELOG** -- add an entry under `[Unreleased]`
+- **README** -- if the feature changes the project's headline capabilities
 
 **User doc example:**
 
@@ -178,7 +178,7 @@ Documentation is part of the feature. A feature without documentation is not don
 ## [Unreleased]
 
 ### Added
-- [Feature name] — [one sentence description] (#42)
+- [Feature name] -- [one sentence description] (#42)
 ```
 
 ---
@@ -205,12 +205,12 @@ Open a pull request. Fill out the template. Link to the story.
 
 CI must pass before merging:
 
-1. **Format** — code is formatted correctly
-2. **Lint** — no violations
-3. **Type check** — no type errors (if applicable)
-4. **Test** — all tests pass
-5. **Build** — project builds cleanly
-6. **Security** — no known vulnerabilities in dependencies
+1. **Format** -- code is formatted correctly
+2. **Lint** -- no violations
+3. **Type check** -- no type errors (if applicable)
+4. **Test** -- all tests pass
+5. **Build** -- project builds cleanly
+6. **Security** -- no known vulnerabilities in dependencies
 
 Address all review comments. Re-request review after making changes. Don't merge your own PR without approval.
 
@@ -220,10 +220,10 @@ Address all review comments. Re-request review after making changes. Don't merge
 
 After merging:
 
-1. **Verify the deployment** — confirm the change is live
-2. **Smoke test** — manually verify the feature works as expected
-3. **Watch for errors** — check logs for the first hour
-4. **Measure impact** — did the feature achieve what the story promised?
+1. **Verify the deployment** -- confirm the change is live
+2. **Smoke test** -- manually verify the feature works as expected
+3. **Watch for errors** -- check logs for the first hour
+4. **Measure impact** -- did the feature achieve what the story promised?
 
 If something goes wrong, revert first and investigate second.
 

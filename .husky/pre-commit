@@ -2,7 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # Run fast checks before every commit.
-# Keep this fast — it runs on every commit.
+# Keep this fast -- it runs on every commit.
 # Slow checks (tests, build) belong in pre-push or CI.
 
 task format:check && task lint

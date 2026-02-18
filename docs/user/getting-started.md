@@ -1,6 +1,6 @@
 # Getting Started
 
-<!-- This file is for end users — people who install and use your project,
+<!-- This file is for end users -- people who install and use your project,
      not people who build or contribute to it.
 
      Write for someone who has never seen the source code.
@@ -17,8 +17,8 @@ Welcome to [Project Name]. This guide will get you up and running in a few minut
 <!-- List only what the user must have before they can install or run this project.
      Keep it short. Link to install instructions for anything non-obvious. -->
 
-- [Requirement 1] — [why it's needed and where to get it]
-- [Requirement 2] — [why it's needed and where to get it]
+- [Requirement 1] -- [why it's needed and where to get it]
+- [Requirement 2] -- [why it's needed and where to get it]
 
 ---
 
@@ -28,14 +28,14 @@ Welcome to [Project Name]. This guide will get you up and running in a few minut
      If there are multiple install methods (package manager, binary, source),
      lead with the recommended one and list others below. -->
 
-**Option 1 — [Recommended method, e.g. package manager]:**
+**Option 1 -- [Recommended method, e.g. package manager]:**
 
 ```bash
 # Replace with the real install command
 [install command]
 ```
 
-**Option 2 — [Alternative method, e.g. download binary]:**
+**Option 2 -- [Alternative method, e.g. download binary]:**
 
 ```bash
 # Replace with the real install command
@@ -120,7 +120,7 @@ cp [config.example] [config]
 <!-- If configuration is done via environment variables, use this table instead:
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `VAR_NAME` | Yes | — | [what it controls] |
+| `VAR_NAME` | Yes | -- | [what it controls] |
 -->
 
 ---
@@ -129,16 +129,16 @@ cp [config.example] [config]
 
 <!-- Point users toward the most useful things to do after the first run. -->
 
-- [Link to a feature guide] — [one-line description]
-- [Link to a feature guide] — [one-line description]
-- [Link to reference docs or API docs] — [one-line description]
+- [Link to a feature guide] -- [one-line description]
+- [Link to a feature guide] -- [one-line description]
+- [Link to reference docs or API docs] -- [one-line description]
 
 ---
 
 ## Troubleshooting
 
 <!-- Add entries here as you discover common problems.
-     Format: Problem → Solution. Be specific. -->
+     Format: Problem -> Solution. Be specific. -->
 
 **Problem:** [Symptom the user sees]
 **Solution:** [Exact steps to fix it]

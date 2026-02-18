@@ -1,6 +1,6 @@
 # Design Patterns
 
-Patterns are solutions to recurring problems. Use them when they solve a problem you actually have — not before. Every pattern adds complexity; make sure it's earning its keep.
+Patterns are solutions to recurring problems. Use them when they solve a problem you actually have -- not before. Every pattern adds complexity; make sure it's earning its keep.
 
 The pseudocode here is intentionally language-neutral. Translate it to your language's idioms.
 
@@ -8,16 +8,16 @@ The pseudocode here is intentionally language-neutral. Translate it to your lang
 
 ## 1. Adapter Pattern
 
-**Problem:** Your core logic needs to talk to the outside world — a database, a file, a network, a terminal — but you don't want to couple your logic to a specific implementation.
+**Problem:** Your core logic needs to talk to the outside world -- a database, a file, a network, a terminal -- but you don't want to couple your logic to a specific implementation.
 
 **Solution:** Define an interface (the port) that describes what you need. Write concrete implementations (adapters) that satisfy it.
 
 ```
 interface Storage {
-  save(record)    → record
-  findById(id)    → record | null
-  findAll()       → list<record>
-  delete(id)      → void
+  save(record)    -> record
+  findById(id)    -> record | null
+  findAll()       -> list<record>
+  delete(id)      -> void
 }
 
 class PostgresStorage implements Storage { ... }  // production
@@ -27,7 +27,7 @@ class FileStorage implements Storage { ... }      // embedded / offline
 
 Your core logic depends only on `Storage`. You can swap the implementation without touching a single line of business logic.
 
-**When to use:** Any time core logic needs to interact with infrastructure — storage, logging, config, time, external APIs, hardware.
+**When to use:** Any time core logic needs to interact with infrastructure -- storage, logging, config, time, external APIs, hardware.
 
 ---
 
@@ -38,7 +38,7 @@ Your core logic depends only on `Storage`. You can swap the implementation witho
 **Solution:** Pass dependencies in rather than constructing them inside. Wire everything together at the composition root.
 
 ```
-# Tightly coupled — hard to test, hard to change
+# Tightly coupled -- hard to test, hard to change
 class OrderService {
   constructor() {
     this.storage = new PostgresStorage()  // hardcoded
@@ -46,7 +46,7 @@ class OrderService {
   }
 }
 
-# Loosely coupled — easy to test, easy to swap
+# Loosely coupled -- easy to test, easy to swap
 class OrderService {
   constructor(storage, mailer) {
     this.storage = storage
@@ -60,7 +60,7 @@ mailer  = SmtpMailer(config.smtpHost)
 service = OrderService(storage, mailer)
 ```
 
-**When to use:** Always. This is not optional — it's the foundation of testable, maintainable code.
+**When to use:** Always. This is not optional -- it's the foundation of testable, maintainable code.
 
 ---
 
@@ -72,18 +72,18 @@ service = OrderService(storage, mailer)
 
 ```
 interface UserRepository {
-  findById(id)         → user | null
-  findByEmail(email)   → user | null
-  save(user)           → user
-  delete(id)           → void
+  findById(id)         -> user | null
+  findByEmail(email)   -> user | null
+  save(user)           -> user
+  delete(id)           -> void
 }
 
-# Business logic — no SQL, no file paths, no HTTP
+# Business logic -- no SQL, no file paths, no HTTP
 class UserService {
   constructor(users: UserRepository) { ... }
 
   register(email, name) {
-    if users.findByEmail(email) exists → raise ConflictError
+    if users.findByEmail(email) exists -> raise ConflictError
     user = User(id: generateId(), email: email, name: name)
     return users.save(user)
   }
@@ -96,25 +96,25 @@ class UserService {
 
 ## 4. Result Pattern
 
-**Problem:** Functions that can fail have two options: return a value or raise an exception. Exceptions are invisible in function signatures — callers don't know a function can fail without reading its implementation.
+**Problem:** Functions that can fail have two options: return a value or raise an exception. Exceptions are invisible in function signatures -- callers don't know a function can fail without reading its implementation.
 
 **Solution:** Return a value that explicitly represents either success or failure. Inspired by Rust's `Result<T, E>`.
 
 ```
 type Result = Ok(value) | Err(error)
 
-function parseEmail(raw) → Result {
-  if raw does not contain "@" → return Err(ValidationError("invalid email"))
+function parseEmail(raw) -> Result {
+  if raw does not contain "@" -> return Err(ValidationError("invalid email"))
   return Ok(raw.trim().lowercase())
 }
 
-# Caller must handle both cases — no surprises
+# Caller must handle both cases -- no surprises
 result = parseEmail(input)
-if result is Ok  → proceed with result.value
-if result is Err → handle result.error
+if result is Ok  -> proceed with result.value
+if result is Err -> handle result.error
 ```
 
-**When to use:** Business logic that can fail in expected, recoverable ways. Not for unexpected errors — those should still propagate as exceptions.
+**When to use:** Business logic that can fail in expected, recoverable ways. Not for unexpected errors -- those should still propagate as exceptions.
 
 ---
 
@@ -126,15 +126,15 @@ if result is Err → handle result.error
 
 ```
 # Each strategy is a function (or small object) with the same signature
-regularPrice(base)  → base
-studentPrice(base)  → base * 0.90
-bulkPrice(base)     → base * 0.85
+regularPrice(base)  -> base
+studentPrice(base)  -> base * 0.90
+bulkPrice(base)     -> base * 0.85
 
 # Selector picks the right one
-function selectPricing(userType) → strategy {
-  "student" → studentPrice
-  "bulk"    → bulkPrice
-  default   → regularPrice
+function selectPricing(userType) -> strategy {
+  "student" -> studentPrice
+  "bulk"    -> bulkPrice
+  default   -> regularPrice
 }
 
 # Usage
@@ -148,7 +148,7 @@ finalPrice = strategy(basePrice)
 
 ## 6. Decorator Pattern
 
-**Problem:** You want to add cross-cutting behavior — logging, caching, retry, metrics — to an existing component without modifying it.
+**Problem:** You want to add cross-cutting behavior -- logging, caching, retry, metrics -- to an existing component without modifying it.
 
 **Solution:** Wrap the component in another component that implements the same interface, adding behavior before or after delegating to the wrapped component.
 
@@ -156,7 +156,7 @@ finalPrice = strategy(basePrice)
 # Base interface
 interface Storage { save(r), findById(id), ... }
 
-# Logging decorator — wraps any Storage
+# Logging decorator -- wraps any Storage
 class LoggingStorage implements Storage {
   constructor(inner: Storage, logger: Logger)
 
@@ -168,7 +168,7 @@ class LoggingStorage implements Storage {
   }
 }
 
-# Stack decorators — each adds one concern
+# Stack decorators -- each adds one concern
 base    = PostgresStorage(connection)
 logged  = LoggingStorage(base, logger)
 cached  = CachingStorage(logged, ttl: 300)
@@ -183,7 +183,7 @@ service = RecordService(storage: cached)
 
 ## 7. Observer / Event Pattern
 
-**Problem:** When something happens, multiple other parts of the system need to react — but the thing that happened shouldn't need to know about all its observers.
+**Problem:** When something happens, multiple other parts of the system need to react -- but the thing that happened shouldn't need to know about all its observers.
 
 **Solution:** Emit events. Observers subscribe to the events they care about. The emitter knows nothing about the observers.
 
@@ -192,7 +192,7 @@ eventBus.on("user.registered", sendWelcomeEmail)
 eventBus.on("user.registered", createDefaultSettings)
 eventBus.on("user.registered", logRegistrationMetric)
 
-# Registration logic just emits — it doesn't know what happens next
+# Registration logic just emits -- it doesn't know what happens next
 function register(email) {
   user = users.save(User(email: email))
   eventBus.emit("user.registered", { userId: user.id, email: user.email })
@@ -220,12 +220,12 @@ function register(email) {
 
 ## Anti-Patterns to Avoid
 
-**God object** — one class that knows everything and does everything. Split it.
+**God object** -- one class that knows everything and does everything. Split it.
 
-**Service locator** — passing a container around and pulling dependencies from it inside functions. Pass the specific dependency instead.
+**Service locator** -- passing a container around and pulling dependencies from it inside functions. Pass the specific dependency instead.
 
-**Premature abstraction** — creating an interface before you have two implementations. Wait until you feel the pain.
+**Premature abstraction** -- creating an interface before you have two implementations. Wait until you feel the pain.
 
-**Inheritance for code reuse** — use composition. Inheritance couples you to the parent's implementation details.
+**Inheritance for code reuse** -- use composition. Inheritance couples you to the parent's implementation details.
 
-**Pattern for pattern's sake** — every pattern adds complexity. Only add one when it solves a real problem you have right now.
+**Pattern for pattern's sake** -- every pattern adds complexity. Only add one when it solves a real problem you have right now.

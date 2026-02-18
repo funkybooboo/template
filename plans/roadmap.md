@@ -4,20 +4,20 @@ This document tracks what we're building, why, and in what order.
 
 ## Vision
 
-<!-- 2–3 sentences: what does this project become at its best? -->
+<!-- 2-3 sentences: what does this project become at its best? -->
 
 ## Status Legend
 
 | Symbol | Meaning |
 |--------|---------|
-| ✅ | Complete |
-| 🚧 | In progress |
-| ⏳ | Planned |
-| 🔮 | Future / under consideration |
+| [x] | Complete |
+| [/] | In progress |
+| [ ] | Planned |
+| [?] | Future / under consideration |
 
 ---
 
-## v0.1.0 — Foundation ⏳
+## v0.1.0 -- Foundation [ ]
 
 **Goal:** Working project with all the basics in place.
 
@@ -31,7 +31,7 @@ This document tracks what we're building, why, and in what order.
 
 ---
 
-## v0.2.0 — Core Features ⏳
+## v0.2.0 -- Core Features [ ]
 
 **Goal:** The features that make this project worth using.
 
@@ -43,18 +43,18 @@ This document tracks what we're building, why, and in what order.
 
 ---
 
-## v0.3.0 — Polish ⏳
+## v0.3.0 -- Polish [ ]
 
 **Goal:** Rough edges smoothed. Error messages helpful. Performance acceptable.
 
 - [ ] Improved error messages and diagnostics
 - [ ] Performance profiling and optimization of hot paths
 - [ ] Edge cases handled gracefully
-- [ ] Test coverage ≥ 85%
+- [ ] Test coverage >= 85%
 
 ---
 
-## v1.0.0 — Public Release 🔮
+## v1.0.0 -- Public Release [?]
 
 **Goal:** Stable, documented, and ready for others to depend on.
 
@@ -93,6 +93,6 @@ Ideas that don't have a version yet. Promoted to a milestone when prioritized.
 
 ## Related
 
-- [Stories](./stories/) — user stories with acceptance criteria
-- [Decisions](./decisions/) — architecture decision records
-- [CHANGELOG](../CHANGELOG.md) — what shipped in each release
+- [Stories](./stories/) -- user stories with acceptance criteria
+- [Decisions](./decisions/) -- architecture decision records
+- [CHANGELOG](../CHANGELOG.md) -- what shipped in each release

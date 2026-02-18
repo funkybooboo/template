@@ -2,7 +2,7 @@
 
 Feature-specific guides for contributors and maintainers.
 
-These docs explain **how things work internally** — architecture decisions, edge cases, integration points, and testing strategy for specific features.
+These docs explain **how things work internally** -- architecture decisions, edge cases, integration points, and testing strategy for specific features.
 
 ## Writing Developer Guides
 
@@ -16,8 +16,8 @@ These docs explain **how things work internally** — architecture decisions, ed
 
 ```
 developer/
-├── README.md   ← you are here
-└── .gitkeep
+|-- README.md   <- you are here
+`-- .gitkeep
 ```
 
 Add a file here for any feature complex enough to warrant explanation beyond inline comments.

@@ -34,9 +34,9 @@ level of detail, and tone expected.
 - Encourages the habit of writing ADRs from day one
 
 ### Negative
-- Someone has to remember to delete this file (low risk — it says so at the top)
+- Someone has to remember to delete this file (low risk -- it says so at the top)
 
 ## Alternatives Considered
 
-1. **Template only, no example**: Rejected — templates without examples are often misinterpreted
-2. **Detailed style guide**: Rejected — overkill; a good example communicates more than rules
+1. **Template only, no example**: Rejected -- templates without examples are often misinterpreted
+2. **Detailed style guide**: Rejected -- overkill; a good example communicates more than rules

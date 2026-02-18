@@ -14,20 +14,20 @@
 # 1. Replace @username with real GitHub usernames or @org/team-slug values.
 # 2. Uncomment the rules you want to enforce.
 # 3. CODEOWNERS only takes effect when branch protection requires code owner
-#    review. Enable that in: Settings → Branches → Require review from
+#    review. Enable that in: Settings -> Branches -> Require review from
 #    Code Owners.
 # ----------------------------------------------------------------------------
 
 # Default owner for everything not matched below.
 # * @username
 
-# CI / build system — changes here affect everyone.
+# CI / build system -- changes here affect everyone.
 # .github/                  @username
 # Taskfile.yml              @username
 
-# Documentation — anyone can review, but flag to a docs owner.
+# Documentation -- anyone can review, but flag to a docs owner.
 # docs/                     @username
 
-# Security-sensitive files — require explicit sign-off.
+# Security-sensitive files -- require explicit sign-off.
 # SECURITY.md               @username
 # .github/workflows/        @username

@@ -8,7 +8,7 @@ The full contributing guide lives in the docs:
 
 It covers:
 - How to report bugs and request features
-- The development workflow (branch → test → implement → PR)
+- The development workflow (branch -> test -> implement -> PR)
 - Commit message format (Conventional Commits)
 - Pull request standards
 - The code review process

@@ -1,14 +1,14 @@
 # Contributing
 
-Thank you for taking the time to contribute. This document explains how to get involved — whether you're fixing a bug, proposing a feature, or improving documentation.
+Thank you for taking the time to contribute. This document explains how to get involved -- whether you're fixing a bug, proposing a feature, or improving documentation.
 
 ## Ways to Contribute
 
-- **Report a bug** — open an issue with steps to reproduce
-- **Request a feature** — open an issue to discuss the idea first
-- **Fix a bug** — open a pull request referencing the issue
-- **Add a feature** — open an issue first, then a pull request
-- **Improve docs** — documentation PRs are always welcome
+- **Report a bug** -- open an issue with steps to reproduce
+- **Request a feature** -- open an issue to discuss the idea first
+- **Fix a bug** -- open a pull request referencing the issue
+- **Add a feature** -- open an issue first, then a pull request
+- **Improve docs** -- documentation PRs are always welcome
 
 ---
 
@@ -66,7 +66,7 @@ Before writing implementation code, write a failing test that describes the beha
 ### 3. Make your changes
 
 - Follow the [code standards](./04-code-standards.md)
-- Keep commits small and focused — one logical change per commit
+- Keep commits small and focused -- one logical change per commit
 - Write commit messages in [Conventional Commits](https://www.conventionalcommits.org/) format
 
 ### 4. Validate locally
@@ -77,7 +77,7 @@ Before pushing, run the full validation suite:
 task validate
 ```
 
-This runs formatting, linting, type checking, and tests. Fix everything before pushing — don't rely on CI to catch things you could catch locally.
+This runs formatting, linting, type checking, and tests. Fix everything before pushing -- don't rely on CI to catch things you could catch locally.
 
 ### 5. Open a pull request
 
@@ -87,7 +87,7 @@ Push your branch and open a PR against `main`. Fill out the PR template complete
 
 ## Commit Messages
 
-We use [Conventional Commits](https://www.conventionalcommits.org/). This is enforced by a Git hook — commits that don't follow the format will be rejected.
+We use [Conventional Commits](https://www.conventionalcommits.org/). This is enforced by a Git hook -- commits that don't follow the format will be rejected.
 
 Format:
 
@@ -139,14 +139,14 @@ Reviews exist to improve the code, not to gatekeep. Be kind. Be specific. Be con
 
 **As an author:**
 - Respond to every comment
-- Don't take feedback personally — it's about the code
+- Don't take feedback personally -- it's about the code
 - Ask for clarification if a comment is unclear
 - Mark resolved comments as resolved
 
 **As a reviewer:**
 - Explain the why behind requested changes
 - Distinguish between blocking issues and suggestions
-- Approve when the code is good enough — perfect is the enemy of shipped
+- Approve when the code is good enough -- perfect is the enemy of shipped
 - Review the tests as carefully as the implementation
 
 ---

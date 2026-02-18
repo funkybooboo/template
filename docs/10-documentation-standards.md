@@ -2,21 +2,21 @@
 
 Documentation is a first-class citizen. It lives in the repository, is reviewed like code, and is updated alongside code. Docs that live outside the repo rot.
 
-- **Plain text in Git** — Markdown, version controlled, searchable, reviewable
-- **Updated with code** — a PR that changes behavior updates the docs
-- **Two audiences** — user docs explain how to use it; developer docs explain how it works
-- **Clarity over completeness** — a short, accurate doc beats a long, stale one
-- **Write for the reader** — not to prove you understand it
+- **Plain text in Git** -- Markdown, version controlled, searchable, reviewable
+- **Updated with code** -- a PR that changes behavior updates the docs
+- **Two audiences** -- user docs explain how to use it; developer docs explain how it works
+- **Clarity over completeness** -- a short, accurate doc beats a long, stale one
+- **Write for the reader** -- not to prove you understand it
 
 ---
 
 ## Why Plain Text in Git?
 
-1. **Version controlled** — see what changed, when, and why
-2. **Reviewed in PRs** — documentation errors are caught before they ship
-3. **Searchable** — `grep` works; no special tools required
-4. **Portable** — readable in any editor, on any machine, offline
-5. **Future-proof** — plain text outlives every tool and platform
+1. **Version controlled** -- see what changed, when, and why
+2. **Reviewed in PRs** -- documentation errors are caught before they ship
+3. **Searchable** -- `grep` works; no special tools required
+4. **Portable** -- readable in any editor, on any machine, offline
+5. **Future-proof** -- plain text outlives every tool and platform
 
 Never store docs in Google Docs, Notion, Confluence, or any external tool. Never use proprietary formats. Never keep docs in a separate repository from the code.
 
@@ -26,24 +26,24 @@ Never store docs in Google Docs, Notion, Confluence, or any external tool. Never
 
 ```
 project/
-├── docs/
-│   ├── 00-table-of-contents.md
-│   ├── 01-introduction.md
-│   ├── ...
-│   ├── user/           ← end-user documentation
-│   └── developer/      ← feature-specific developer guides
-│
-├── plans/
-│   ├── roadmap.md
-│   ├── stories/        ← user stories (US-NNN-title.md)
-│   ├── specs/          ← technical specs for complex features
-│   ├── decisions/      ← architecture decision records (ADR-NNN-title.md)
-│   └── retrospectives/ ← release retrospectives
-│
-├── README.md           ← front door: what, quick start, links
-├── CHANGELOG.md        ← version history
-├── CONTRIBUTING.md     ← how to contribute
-└── SECURITY.md         ← vulnerability reporting
+|-- docs/
+|   |-- 00-table-of-contents.md
+|   |-- 01-introduction.md
+|   |-- ...
+|   |-- user/           <- end-user documentation
+|   `-- developer/      <- feature-specific developer guides
+|
+|-- plans/
+|   |-- roadmap.md
+|   |-- stories/        <- user stories (US-NNN-title.md)
+|   |-- specs/          <- technical specs for complex features
+|   |-- decisions/      <- architecture decision records (ADR-NNN-title.md)
+|   `-- retrospectives/ <- release retrospectives
+|
+|-- README.md           <- front door: what, quick start, links
+|-- CHANGELOG.md        <- version history
+|-- CONTRIBUTING.md     <- how to contribute
+`-- SECURITY.md         <- vulnerability reporting
 ```
 
 ---
@@ -118,7 +118,7 @@ the `FileWriter` port. Both are injected, so both can be swapped in tests.
 
 ## Architecture Decision Records
 
-When you make a significant architectural decision, write it down. Future contributors — including yourself — will want to know why things are the way they are.
+When you make a significant architectural decision, write it down. Future contributors -- including yourself -- will want to know why things are the way they are.
 
 **Location:** `plans/decisions/ADR-NNN-short-title.md`
 
@@ -140,9 +140,9 @@ Use an in-memory implementation that satisfies the Storage interface.
 
 ## Rationale
 
-- Zero setup — no database required to run tests
-- Fast — no I/O overhead
-- Real behavior — unlike mocks, it actually stores and retrieves data
+- Zero setup -- no database required to run tests
+- Fast -- no I/O overhead
+- Real behavior -- unlike mocks, it actually stores and retrieves data
 
 ## Consequences
 
@@ -155,8 +155,8 @@ Use an in-memory implementation that satisfies the Storage interface.
 
 ## Alternatives Considered
 
-- **Mocks** — rejected; tests implementation details, not behavior
-- **Real database in container** — use for E2E tests, not unit/integration
+- **Mocks** -- rejected; tests implementation details, not behavior
+- **Real database in container** -- use for E2E tests, not unit/integration
 ```
 
 Write an ADR when:
@@ -171,7 +171,7 @@ Write an ADR when:
 
 ### Structure
 
-- One H1 (`#`) per file — the document title
+- One H1 (`#`) per file -- the document title
 - H2 (`##`) for major sections
 - H3 (`###`) for subsections
 - Never skip levels
@@ -195,15 +195,15 @@ def greet(name: str) -> str:
 ```
 
 ```
-# Pseudocode — no language tag needed
+# Pseudocode -- no language tag needed
 result = find_user(id)
-if result is null → raise NotFoundError
+if result is null -> raise NotFoundError
 ```
 ````
 
 ### Links
 
-Use descriptive link text — never "click here":
+Use descriptive link text -- never "click here":
 
 ```markdown
 # Good
@@ -238,7 +238,7 @@ Every user-visible change gets an entry. Follow [Keep a Changelog](https://keepa
 Rules:
 - Add entries under `[Unreleased]` as you work
 - Move `[Unreleased]` to a version heading on release
-- Write for users — describe the impact, not the implementation
+- Write for users -- describe the impact, not the implementation
 - Link to the issue or PR
 
 ---
@@ -247,10 +247,10 @@ Rules:
 
 The README answers four questions in under two minutes:
 
-1. **What is this?** — one sentence
-2. **Why does it exist?** — the problem it solves
-3. **How do I get started?** — minimum steps to run it
-4. **Where do I go next?** — links to docs, contributing guide
+1. **What is this?** -- one sentence
+2. **Why does it exist?** -- the problem it solves
+3. **How do I get started?** -- minimum steps to run it
+4. **Where do I go next?** -- links to docs, contributing guide
 
 Keep it short. Link to the detailed docs. Don't duplicate content that lives elsewhere.
 

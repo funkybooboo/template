@@ -9,8 +9,8 @@ Before you begin, make sure you have the following installed:
 <!-- List what someone needs before they can run this project.
      Be specific about versions. Link to install instructions. -->
 
-- [Tool 1] — [what it's for and where to get it]
-- [Tool 2] — [what it's for and where to get it]
+- [Tool 1] -- [what it's for and where to get it]
+- [Tool 2] -- [what it's for and where to get it]
 
 ```bash
 # Verify your setup
@@ -72,7 +72,7 @@ All configuration is done through environment variables. Never hardcode config v
 | `task setup` | Install dependencies and prepare the environment |
 | `task dev` | Run the project in development mode |
 | `task test` | Run all tests |
-| `task validate` | Run all checks — format, lint, type-check, test, build |
+| `task validate` | Run all checks -- format, lint, type-check, test, build |
 | `task build` | Build for production |
 | `task --list` | Show all available commands |
 
@@ -82,13 +82,13 @@ All configuration is done through environment variables. Never hardcode config v
 
 ```
 project-name/
-├── docs/             # Documentation
-├── plans/            # Roadmap, stories, decisions, retrospectives
-├── .github/          # CI workflow and GitHub templates
-├── .env.example      # Environment variable reference
-├── Taskfile.yml      # All development commands
-├── CHANGELOG.md      # Version history
-└── README.md
+|-- docs/             # Documentation
+|-- plans/            # Roadmap, stories, decisions, retrospectives
+|-- .github/          # CI workflow and GitHub templates
+|-- .env.example      # Environment variable reference
+|-- Taskfile.yml      # All development commands
+|-- CHANGELOG.md      # Version history
+`-- README.md
 ```
 
 <!-- Add your project's source directories here once you've set them up. -->
@@ -98,7 +98,7 @@ project-name/
 ## Troubleshooting
 
 **Problem:** `task` command not found
-**Solution:** Install [Task](https://taskfile.dev/installation/) — the task runner used by this project.
+**Solution:** Install [Task](https://taskfile.dev/installation/) -- the task runner used by this project.
 
 **Problem:** Environment variable errors on startup
 **Solution:** Make sure you've copied `.env.example` to `.env` and filled in all required values.

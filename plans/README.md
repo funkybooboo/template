@@ -13,12 +13,12 @@ Project planning, decisions, and history.
 ## How to Use This Directory
 
 **Starting a new feature?**
-1. Write a user story in `stories/` — define the problem and acceptance criteria first
+1. Write a user story in `stories/` -- define the problem and acceptance criteria first
 2. If the implementation is complex, write a technical spec in `specs/`
 3. If you're making a significant architectural decision, write an ADR in `decisions/`
 
 **Finishing a release?**
-Write a retrospective in `retrospectives/` — what went well, what didn't, what to change.
+Write a retrospective in `retrospectives/` -- what went well, what didn't, what to change.
 
 **Looking for context on a past decision?**
-Check `decisions/` — every significant architectural choice should be documented there.
+Check `decisions/` -- every significant architectural choice should be documented there.

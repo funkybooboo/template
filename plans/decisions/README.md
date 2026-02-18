@@ -2,7 +2,7 @@
 
 Every significant architectural decision gets a record here. ADRs are short, permanent, and written at the time the decision is made.
 
-Name files `ADR-NNN-short-title.md`. Never delete or edit a past ADR — if a decision is reversed, write a new ADR that supersedes it.
+Name files `ADR-NNN-short-title.md`. Never delete or edit a past ADR -- if a decision is reversed, write a new ADR that supersedes it.
 
 ## Status Values
 

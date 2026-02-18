@@ -17,7 +17,7 @@ permissions:
 jobs:
   # ----------------------------------------------------------------------------
   # Format
-  # Verify code is formatted correctly. Fail fast — no point running other
+  # Verify code is formatted correctly. Fail fast -- no point running other
   # checks if the code isn't even formatted.
   # ----------------------------------------------------------------------------
   format:
@@ -140,7 +140,7 @@ jobs:
   # ----------------------------------------------------------------------------
   # All Checks
   # A single job that requires all others to pass. Use this as the required
-  # status check in branch protection rules — that way you only need to update
+  # status check in branch protection rules -- that way you only need to update
   # one rule when you add or remove jobs above.
   # ----------------------------------------------------------------------------
   all-checks:

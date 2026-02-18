@@ -35,8 +35,8 @@ We'll coordinate public disclosure with you after the fix ships. We're happy to 
 
 | Version | Supported |
 |---------|-----------|
-| Latest  | ✅ |
-| Older   | ❌ — please upgrade |
+| Latest  | Yes |
+| Older   | No -- please upgrade |
 
 Update this table once you have a stable release and a support policy.
 
@@ -47,4 +47,4 @@ When using this project:
 - Use the latest release
 - Never commit secrets, API keys, or credentials to version control
 - Keep dependencies up to date (`task deps:audit`)
-- Review `.env.example` — every variable is documented there
+- Review `.env.example` -- every variable is documented there

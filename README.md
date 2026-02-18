@@ -9,7 +9,7 @@
 
 ## What Is It?
 
-<!-- 2–4 sentences. What problem does this solve? Who is it for?
+<!-- 2-4 sentences. What problem does this solve? Who is it for?
      What would someone have to do without it? -->
 
 ## Getting Started

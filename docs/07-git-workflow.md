@@ -1,15 +1,15 @@
 # Git Workflow
 
-Clean Git history is not vanity — it is a tool. A well-maintained history lets you understand why a change was made, bisect bugs to their source, and revert safely. Treat commits like documentation.
+Clean Git history is not vanity -- it is a tool. A well-maintained history lets you understand why a change was made, bisect bugs to their source, and revert safely. Treat commits like documentation.
 
 ## Strategy: GitHub Flow
 
-We use **GitHub Flow** — simple, fast, and built for continuous delivery.
+We use **GitHub Flow** -- simple, fast, and built for continuous delivery.
 
 ```
-main ──●──────────────────────────────●── (always deployable)
+main --*------------------------------*-- (always deployable)
         \                            /
-         ●── feature/thing ─────────●
+         *-- feature/thing ---------*
 ```
 
 Rules:
@@ -187,11 +187,11 @@ git rebase -i origin/main
 ```
 
 In the editor:
-- `pick` — keep as-is
-- `reword` — change the commit message
-- `squash` — combine with the previous commit (keeps both messages)
-- `fixup` — combine with the previous commit (discards this message)
-- `drop` — remove the commit entirely
+- `pick` -- keep as-is
+- `reword` -- change the commit message
+- `squash` -- combine with the previous commit (keeps both messages)
+- `fixup` -- combine with the previous commit (discards this message)
+- `drop` -- remove the commit entirely
 
 Use this to:
 - Squash "fix typo" and "WIP" commits into the commit they belong to
@@ -202,7 +202,7 @@ Use this to:
 
 ### Patch Staging
 
-Stage specific changes within a file — not the whole file:
+Stage specific changes within a file -- not the whole file:
 
 ```bash
 git add -p
@@ -216,7 +216,7 @@ This lets you make multiple logical changes in one working session and commit th
 
 ### Title
 
-PR titles must follow Conventional Commits format — they become the squash commit message.
+PR titles must follow Conventional Commits format -- they become the squash commit message.
 
 ```
 feat(auth): add OAuth2 login flow
@@ -232,8 +232,8 @@ If a feature is large, break it into a sequence of smaller PRs that each stand o
 
 ### Merge Strategy
 
-- **Squash merge** — default for feature branches. Combines all commits into one clean commit on `main`.
-- **Rebase merge** — for branches with a clean, well-crafted commit series worth preserving.
+- **Squash merge** -- default for feature branches. Combines all commits into one clean commit on `main`.
+- **Rebase merge** -- for branches with a clean, well-crafted commit series worth preserving.
 
 ---
 
@@ -241,13 +241,13 @@ If a feature is large, break it into a sequence of smaller PRs that each stand o
 
 Two hooks run automatically:
 
-**`commit-msg`** — validates commit message format (Conventional Commits). Runs on every commit.
+**`commit-msg`** -- validates commit message format (Conventional Commits). Runs on every commit.
 
-**`pre-commit`** — runs fast checks before every commit:
+**`pre-commit`** -- runs fast checks before every commit:
 - Code formatter check
 - Linter
 
-Keep this fast — it runs on every commit. Slow checks (full test suite, build) belong in CI.
+Keep this fast -- it runs on every commit. Slow checks (full test suite, build) belong in CI.
 
 If a hook fails, fix the issue and try again. Never skip hooks with `--no-verify` unless you have a very good reason.
 
@@ -289,14 +289,14 @@ git blame <file>                # who changed each line and when
 
 Configure these branch protection rules on GitHub:
 
-- ✅ Require pull request before merging
-- ✅ Require at least 1 approval
-- ✅ Dismiss stale approvals when new commits are pushed
-- ✅ Require status checks to pass (all CI jobs)
-- ✅ Require branches to be up to date before merging
-- ✅ Require conversation resolution before merging
-- ✅ Do not allow force pushes
-- ✅ Do not allow deletions
+- [OK] Require pull request before merging
+- [OK] Require at least 1 approval
+- [OK] Dismiss stale approvals when new commits are pushed
+- [OK] Require status checks to pass (all CI jobs)
+- [OK] Require branches to be up to date before merging
+- [OK] Require conversation resolution before merging
+- [OK] Do not allow force pushes
+- [OK] Do not allow deletions
 
 ---
 

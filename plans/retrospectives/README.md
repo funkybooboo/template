@@ -14,7 +14,7 @@ Name files by date and version: `YYYY-MM-v0.1.0.md`.
 ## Retrospective Template
 
 ```markdown
-# Retrospective: v0.1.0 — 2024-01-31
+# Retrospective: v0.1.0 -- 2024-01-31
 
 ## What Went Well
 
@@ -46,7 +46,7 @@ Name files by date and version: `YYYY-MM-v0.1.0.md`.
 
 ## Tips
 
-- Write it while the release is fresh — don't wait a week
+- Write it while the release is fresh -- don't wait a week
 - Be specific: "PRs took too long to review" is less useful than "3 PRs sat unreviewed for >3 days"
 - Action items need owners and deadlines, or they won't happen
-- Keep it short — a retrospective that takes an hour to write won't get written
+- Keep it short -- a retrospective that takes an hour to write won't get written

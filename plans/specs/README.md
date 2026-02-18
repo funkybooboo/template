@@ -1,6 +1,6 @@
 # Technical Specifications
 
-Detailed technical plans for complex features. Not every story needs a spec — write one when the implementation involves significant design decisions, multiple components, or non-obvious tradeoffs.
+Detailed technical plans for complex features. Not every story needs a spec -- write one when the implementation involves significant design decisions, multiple components, or non-obvious tradeoffs.
 
 Name files to match their story: `US-NNN-short-title.md`.
 

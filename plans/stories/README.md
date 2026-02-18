@@ -6,16 +6,16 @@ One file per story. Name files `US-NNN-short-title.md`.
 
 | Symbol | Meaning |
 |--------|---------|
-| ⏳ | Planned — not started |
-| 🚧 | In progress |
-| ✅ | Complete |
-| ❌ | Cancelled |
+| [ ] | Planned -- not started |
+| [/] | In progress |
+| [x] | Complete |
+| [-] | Cancelled |
 
 ## Index
 
 | Story | Title | Status |
 |-------|-------|--------|
-| [US-001](./US-001-example.md) | Example story (delete me) | ⏳ |
+| [US-001](./US-001-example.md) | Example story (delete me) | [ ] |
 
 ---
 

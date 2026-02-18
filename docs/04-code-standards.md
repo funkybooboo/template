@@ -1,10 +1,10 @@
 # Code Standards
 
-Code is read far more often than it is written. Write for the next person who reads it — which is usually you, six months from now.
+Code is read far more often than it is written. Write for the next person who reads it -- which is usually you, six months from now.
 
-- **Explicit over implicit** — make intent clear through names, types, and structure
-- **Readable over clever** — obvious code beats elegant code that requires study
-- **Consistent** — follow the patterns already in the codebase
+- **Explicit over implicit** -- make intent clear through names, types, and structure
+- **Readable over clever** -- obvious code beats elegant code that requires study
+- **Consistent** -- follow the patterns already in the codebase
 
 ---
 
@@ -99,10 +99,10 @@ If a function doesn't fit on one screen, consider breaking it up.
 Pass dependencies in. Don't reach out and grab them from global state.
 
 ```
-# Good — dependency is visible
+# Good -- dependency is visible
 calculate_discount(price, user_type)
 
-# Bad — hidden dependency
+# Bad -- hidden dependency
 calculate_discount(price)
   user_type = get_current_user().type  -- where did this come from?
 ```
@@ -158,12 +158,12 @@ Validate inputs at the boundary. Don't let invalid data propagate deep into the 
 The code shows what is happening. Comments explain why.
 
 ```
-# Good — explains a non-obvious decision
-# Cap at 90 days — older records are archived and excluded
+# Good -- explains a non-obvious decision
+# Cap at 90 days -- older records are archived and excluded
 # from live queries to keep response times under 100ms
 cutoff = today() - days(90)
 
-# Bad — restates the code
+# Bad -- restates the code
 # subtract 90 days from today
 cutoff = today() - days(90)
 ```
@@ -238,7 +238,7 @@ Linters catch bugs and enforce patterns that formatters don't cover.
 
 Use the type system your language provides. Types are documentation that the compiler checks.
 
-- Prefer domain types over primitives — `UserId` is clearer than a bare `string`
+- Prefer domain types over primitives -- `UserId` is clearer than a bare `string`
 - Make invalid states unrepresentable through the type system
 - Handle nullable / optional values explicitly; don't assume non-null
 - Avoid casts and type assertions; document why when you must use them
@@ -249,10 +249,10 @@ Use the type system your language provides. Types are documentation that the com
 
 Standards are enforced through:
 
-1. **Formatter** — runs on commit via pre-commit hook; no manual style debates
-2. **Linter** — runs in CI; violations fail the build
-3. **Code review** — reviewers check for adherence to these standards
-4. **Tests** — code that violates these standards is usually harder to test, which surfaces problems early
+1. **Formatter** -- runs on commit via pre-commit hook; no manual style debates
+2. **Linter** -- runs in CI; violations fail the build
+3. **Code review** -- reviewers check for adherence to these standards
+4. **Tests** -- code that violates these standards is usually harder to test, which surfaces problems early
 
 Run all checks before pushing:
 
