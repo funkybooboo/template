@@ -22,6 +22,10 @@ Everything you need to understand, build, and contribute to this project.
 
 End-user guides live in [`user/`](./user/). Written for people who use the project, not people who build it.
 
+| Document | What it covers |
+|----------|----------------|
+| [Getting Started](./user/getting-started.md) | Install, first run, basic usage, configuration |
+
 ## Developer Guides
 
 Feature-specific developer guides live in [`developer/`](./developer/). Written for contributors and maintainers.

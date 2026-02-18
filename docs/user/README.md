@@ -17,7 +17,7 @@ These docs explain **what you can do** and **how to do it** — not how it works
 ```
 user/
 ├── README.md          ← you are here
-├── getting-started.md ← first-run guide for end users
+├── getting-started.md ← first-run guide for end users (fill in placeholders)
 └── features/          ← one file per major feature
     └── .gitkeep
 ```

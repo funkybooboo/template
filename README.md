@@ -3,7 +3,7 @@
 > One sentence: what this project does and who it's for.
 
 [![CI](https://github.com/username/project-name/actions/workflows/ci.yml/badge.svg)](https://github.com/username/project-name/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/username/project-name)](./LICENSE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](./LICENSE)
 
 ---
 
@@ -45,5 +45,4 @@ Contributions are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) to get start
 
 ## License
 
-<!-- Replace with your license name -->
-[MIT](./LICENSE)
+[GPL-3.0](./LICENSE)
