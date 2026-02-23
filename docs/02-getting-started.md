@@ -32,7 +32,7 @@ cd project-name
 **2. Install dependencies:**
 
 ```bash
-task setup
+mise run setup
 ```
 
 **3. Configure your environment:**
@@ -46,7 +46,7 @@ Open `.env` and fill in the required values. Every variable is documented in `.e
 **4. Run the project:**
 
 ```bash
-task dev
+mise run dev
 ```
 
 ---
@@ -69,12 +69,12 @@ All configuration is done through environment variables. Never hardcode config v
 
 | Command | Description |
 |---------|-------------|
-| `task setup` | Install dependencies and prepare the environment |
-| `task dev` | Run the project in development mode |
-| `task test` | Run all tests |
-| `task validate` | Run all checks -- format, lint, type-check, test, build |
-| `task build` | Build for production |
-| `task --list` | Show all available commands |
+| `mise run setup` | Install dependencies and prepare the environment |
+| `mise run dev` | Run the project in development mode |
+| `mise run test` | Run all tests |
+| `mise run validate` | Run all checks -- format, lint, type-check, test, build |
+| `mise run build` | Build for production |
+| `mise tasks ls` | Show all available commands |
 
 ---
 
@@ -86,7 +86,7 @@ project-name/
 |-- plans/            # Roadmap, stories, decisions, retrospectives
 |-- .github/          # CI workflow and GitHub templates
 |-- .env.example      # Environment variable reference
-|-- Taskfile.yml      # All development commands
+|-- mise.toml         # All development commands
 |-- CHANGELOG.md      # Version history
 `-- README.md
 ```
@@ -97,8 +97,8 @@ project-name/
 
 ## Troubleshooting
 
-**Problem:** `task` command not found
-**Solution:** Install [Task](https://taskfile.dev/installation/) -- the task runner used by this project.
+**Problem:** `mise` command not found
+**Solution:** Install [mise](https://mise.jdx.dev/getting-started.html) -- the task runner used by this project.
 
 **Problem:** Environment variable errors on startup
 **Solution:** Make sure you've copied `.env.example` to `.env` and filled in all required values.

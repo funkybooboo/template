@@ -188,8 +188,8 @@ Documentation is part of the feature. A feature without documentation is not don
 Before requesting a review, review your own work:
 
 - [ ] All acceptance criteria are covered by tests
-- [ ] All tests pass locally (`task test`)
-- [ ] All checks pass locally (`task validate`)
+- [ ] All tests pass locally (`mise run test`)
+- [ ] All checks pass locally (`mise run validate`)
 - [ ] No debug statements, commented-out code, or stray TODOs
 - [ ] Complex logic has comments explaining *why*, not *what*
 - [ ] Public APIs have documentation comments

@@ -22,8 +22,8 @@ Closes #
 ## Checklist
 
 - [ ] Tests written for all new behavior
-- [ ] All tests pass locally (`task test`)
-- [ ] All checks pass locally (`task validate`)
+- [ ] All tests pass locally (`mise run test`)
+- [ ] All checks pass locally (`mise run validate`)
 - [ ] Documentation updated (if behavior changed)
 - [ ] CHANGELOG updated under `[Unreleased]`
 - [ ] Self-reviewed -- no debug code, no commented-out blocks, no TODOs left behind

@@ -17,9 +17,9 @@
 ```bash
 git clone https://github.com/username/project-name.git
 cd project-name
-task setup
+mise run setup
 cp .env.example .env
-task dev
+mise run dev
 ```
 
 See [Getting Started](./docs/02-getting-started.md) for full setup, configuration, and available commands.

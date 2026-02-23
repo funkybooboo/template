@@ -46,5 +46,5 @@ When using this project:
 
 - Use the latest release
 - Never commit secrets, API keys, or credentials to version control
-- Keep dependencies up to date (`task deps:audit`)
+- Keep dependencies up to date (`mise run deps:audit`)
 - Review `.env.example` -- every variable is documented there

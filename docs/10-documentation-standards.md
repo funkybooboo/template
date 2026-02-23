@@ -186,7 +186,7 @@ Specify the language when it's real code. Use unlabeled blocks for pseudocode an
 
 ````markdown
 ```bash
-task test
+mise run test
 ```
 
 ```python

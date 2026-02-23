@@ -17,10 +17,10 @@ It covers:
 
 ```bash
 # Set up your development environment
-task setup
+mise run setup
 
 # Run all checks before pushing
-task validate
+mise run validate
 
 # Commit format
 git commit -m "type(scope): description"

@@ -227,9 +227,9 @@ Coverage is a tool, not a goal. 100% coverage with bad tests is worse than 80% c
 ## Running Tests
 
 ```bash
-task test           # all tests
-task test:watch     # watch mode -- re-runs on file change
-task test:coverage  # with coverage report
+mise run test           # all tests
+mise run test:watch     # watch mode -- re-runs on file change
+mise run test:coverage  # with coverage report
 ```
 
-Configure additional test commands in `Taskfile.yml` for your project's needs.
+Configure additional test commands in `mise.toml` for your project's needs.

@@ -257,5 +257,5 @@ Standards are enforced through:
 Run all checks before pushing:
 
 ```bash
-task validate
+mise run validate
 ```

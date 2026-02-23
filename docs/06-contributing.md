@@ -31,7 +31,7 @@ Quick version:
 ```bash
 git clone https://github.com/username/project-name.git
 cd project-name
-task setup
+mise run setup
 ```
 
 ---
@@ -74,7 +74,7 @@ Before writing implementation code, write a failing test that describes the beha
 Before pushing, run the full validation suite:
 
 ```bash
-task validate
+mise run validate
 ```
 
 This runs formatting, linting, type checking, and tests. Fix everything before pushing -- don't rely on CI to catch things you could catch locally.

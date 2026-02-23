@@ -27,7 +27,7 @@ This document tracks what we're building, why, and in what order.
 - [ ] Tests for all core behavior
 - [ ] Documentation for getting started
 
-**Done when:** A new contributor can clone, run `task setup`, and have something working in under 10 minutes.
+**Done when:** A new contributor can clone, run `mise run setup`, and have something working in under 10 minutes.
 
 ---
 
